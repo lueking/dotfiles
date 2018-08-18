@@ -24,7 +24,7 @@ URxvt.urgentOnBell:         false
 URxvt.visualBell:           false
 Urxvt.insecure:             true
 URxvt.loginShell:           true
-URxvt.saveLines:            12000
+URxvt.saveLines:            100000
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
  

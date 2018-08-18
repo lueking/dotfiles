@@ -17,7 +17,7 @@ prompt suse
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
-setopt appendhistory autocd nomatch
+setopt appendhistory sharehistory incappendhistory autocd nomatch
 unsetopt beep extendedglob notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
@@ -30,3 +30,6 @@ unset SSH_ASKPASS
 bindkey '\e[3~' delete-char
 bindkey '\e[7~' beginning-of-line
 bindkey '\e[8~' end-of-line
+
+bindkey -v
+bindkey '^R' history-incremental-search-backward
