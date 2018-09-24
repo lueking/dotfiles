@@ -377,10 +377,12 @@ clientkeys = gears.table.join(
         end ,
         {description = "(un)maximize horizontally", group = "client"}),
     awful.key({ modkey,           }, "\\",     function () awful.util.spawn("/usr/bin/slock") end),
-    awful.key({                   }, "XF86AudioRaiseVolume", function () awful.util.spawn("amixer set Master 5%+") end),
-    awful.key({                   }, "XF86AudioLowerVolume", function () awful.util.spawn("amixer set Master 5%-") end),
-    awful.key({                   }, "XF86AudioMute",        function () awful.util.spawn("amixer sset Master toggle") end),
-    awful.key({ modkey,           }, "-",      function (c) c.sticky = not c.sticky  end)
+    awful.key({                   }, "XF86AudioRaiseVolume",  function () awful.util.spawn("amixer set Master 5%+") end),
+    awful.key({                   }, "XF86AudioLowerVolume",  function () awful.util.spawn("amixer set Master 5%-") end),
+    awful.key({                   }, "XF86AudioMute",         function () awful.util.spawn("amixer sset Master toggle") end),
+    awful.key({ modkey,           }, "-",                     function (c) c.sticky = not c.sticky  end),
+    awful.key({                   }, "XF86MonBrightnessUp",   function () awful.util.spawn("brightnessctl set 10%+") end),
+    awful.key({                   }, "XF86MonBrightnessDown", function () awful.util.spawn("brightnessctl set 10%-") end)
 
 
 )
